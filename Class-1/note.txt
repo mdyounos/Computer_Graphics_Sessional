@@ -1,0 +1,52 @@
+Material download:
+https://drive.google.com/drive/folders/1Aql_XIBJaoFQex9ButI-9HsenUjzSzjB
+
+রিপোর্ট নাম:  Introduction to Graphics Library Function and Graphics IDE.
+
+//Draw a circle
+#include<graphics.h>
+#include <stdio.h>
+#include<dos.h>
+int main()
+{
+    initwindow(400, 300, "First Sample");
+    circle(100,100,50);
+    while(!kbhit())
+    {
+        delay(200);
+    }
+    return 0;
+}
+
+
+#include<graphics.h>
+#include <stdio.h>
+#include<dos.h>
+//getmaxx()
+//getmaxy()
+int main()
+{
+    initwindow(1000, 600, "First Sample");
+    int X=getmaxx();
+    int Y=getmaxy();
+    int x=X/2;
+    int y=Y/2;
+    rectangle(0,0,X,Y);
+    line(x,0,x,Y);
+    line(0,y,X,y);
+    circle(x+100,y-100,50);
+    circle(x-100,y-100,50);
+    circle(x+100,y+100,50);
+    circle(x-100,y+100,50);
+    while(!kbhit())
+    {
+        delay(200);
+    }
+    return 0;
+}
+
+
+
+
+C graphics functions
+https://www.programmingsimplified.com/c/graphics.h#functions
