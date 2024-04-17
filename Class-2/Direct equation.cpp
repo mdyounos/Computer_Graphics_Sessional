@@ -17,13 +17,13 @@ void draw1(int x1,int y1,int x2,int y2)
 {
     xp=x1;
     yp=y1;
-    putpixel(xp,yp,WHITE);
+    putpixel(x+xp,y+yp,RED);
     while(yp<y2)
     {
         yp++;
         xf=(yp-b)/m;
         xp = xf + 0.5;
-        putpixel(x+xp,y+yp,WHITE);
+        putpixel(x+xp,y+yp,RED);
     }
 }
 
@@ -31,23 +31,20 @@ void draw2(int x1,int y1,int x2,int y2)
 {
     xp=x1;
     yp=y1;
-    putpixel(xp,yp,WHITE);
+    putpixel(x+xp,y+yp,RED);
     while(xp<x2)
     {
         xp++;
         yf=m*xf+b;
         yp = yf + 0.5;
-        putpixel(x+xp,y+yp,WHITE);
+        putpixel(x+xp,y+yp,RED);
     }
 }
 
 
 int main()
 {
-    //initwindow(1000,600,"First sample");
-    int gd = DETECT, gm;
-    initgraph(&gd, &gm, NULL);
-    setbkcolor(WHITE);
+    initwindow(1000,600,"First sample");
 
     int X=getmaxx();
     int Y=getmaxy();
@@ -75,12 +72,10 @@ int main()
         draw2(x1,y1,x2,y2);
     }
 
-    cleardevice();
     while(!kbhit())
     {
         delay(200);
     }
-
     closegraph();
     return 0;
 }

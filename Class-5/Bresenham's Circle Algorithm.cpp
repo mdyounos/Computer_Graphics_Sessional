@@ -6,15 +6,15 @@ int x,y;
 void drawing(int X,int Y,int h,int k)
 {
     int a=x/2,b=y/2;
-    putpixel(a-(X+h),b-(Y+k),15);
-    putpixel(a-(Y+h),b-(X+k),15);
-    putpixel(a-(-Y+h),b-(X+k),15);
-    putpixel(a-(-X+h),b-(Y+k),15);
+    putpixel(a+(X+h),b+(Y+k),15);
+    putpixel(a+(Y+h),b+(X+k),15);
+    putpixel(a+(-Y+h),b+(X+k),15);
+    putpixel(a+(-X+h),b+(Y+k),15);
 
-    putpixel(a-(-X+h),b-(-Y+k),15);
-    putpixel(a-(-Y+h),b-(-X+k),15);
-    putpixel(a-(Y+h),b-(-X+k),15);
-    putpixel(a-(X+h),b-(-Y+k),15);
+    putpixel(a+(-X+h),b+(-Y+k),15);
+    putpixel(a+(-Y+h),b+(-X+k),15);
+    putpixel(a+(Y+h),b+(-X+k),15);
+    putpixel(a+(X+h),b+(-Y+k),15);
 }
 
 
@@ -55,6 +55,4 @@ int main()
         {
             delay(200);
         }
-
-
-    }
+}
