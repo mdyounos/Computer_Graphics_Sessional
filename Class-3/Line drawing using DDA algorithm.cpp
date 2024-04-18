@@ -16,13 +16,13 @@ void draw1(int x1,int y1,int x2,int y2)
 {
     xp=x1;
     yp=y1;
-    putpixel(xp,yp,WHITE);
+    putpixel(x+xp,y+yp,4);
     while(yp<y2)
     {
-        xp = xf + 0.5;
-        putpixel(x+xp,y+yp,WHITE);
-        xf= xf+minv;
         yp++;
+        xf= xf+minv;
+        xp = xf + 0.5;
+        putpixel(x+xp,y+yp,4);
     }
 }
 
@@ -30,13 +30,13 @@ void draw2(int x1,int y1,int x2,int y2)
 {
     xp=x1;
     yp=y1;
-    putpixel(xp,yp,WHITE);
+    putpixel(x+xp,y+yp,1);
     while(xp<x2)
     {
-        yp = yf + 0.5;
-        putpixel(x+xp,y+yp,WHITE);
         xp++;
         yf= yf+m;
+        yp = yf + 0.5;
+        putpixel(x+xp,y+yp,1);
     }
 }
 
