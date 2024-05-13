@@ -76,6 +76,6 @@ int main()
     {
         delay(200);
     }
-    closegraph();
+
     return 0;
 }

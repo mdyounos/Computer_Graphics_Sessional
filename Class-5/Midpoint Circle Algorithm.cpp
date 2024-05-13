@@ -51,11 +51,11 @@ int main()
             Y--;
         }
     }
-        while(!kbhit())
-        {
-            delay(200);
-        }
-
-
+    while(!kbhit())
+    {
+        delay(200);
     }
+
+
+}
 
